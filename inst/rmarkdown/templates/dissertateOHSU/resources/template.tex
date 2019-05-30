@@ -1,0 +1,218 @@
+%% For Use With Dissertate OHSU LaTeX Class
+%% Added to RMarkdown by Tyson S. Barrett, PhD
+
+% Document class and options
+\documentclass{DissertateOHSU}
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+
+% Pandoc header
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$preamble$
+
+\usepackage{fancyhdr}
+\usepackage{endnotes}% if authoryear option is used
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{amsmath,amsfonts}% popular packages from the American Mathematical Society
+\usepackage{latexsym}% latex symbols
+\usepackage{lineno}% for line numbers
+\usepackage{array}% for tables
+\usepackage{ulem}% for underlining
+\usepackage{xcolor}%  for color declarations
+\usepackage{hyperref}% for hypertext linking
+% for the tightlist
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% For code highlighting and such
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\singlespacing\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{array}
+\newcolumntype{x}[1]{%
+  >{\\centering\\arraybackslash}m{#1}}%
+\usepackage{placeins}
+\counterwithin{figure}{chapter}
+\counterwithin{table}{chapter}
+\usepackage[makeroom]{cancel}
+%% Just for examples
+\usepackage{lipsum}
+%% Citations
+\usepackage{natbib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Figure numbering - chapter.number %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LAYOUT: Title Page - info filled above    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\maketitle}{
+	\vspace*{\fill}
+	\begin{center}
+	\doublespaced
+	\MakeUppercase{$title$}\\
+	by\\
+	$author$ \\
+	\singlespaced
+	\vspace{20pt}
+	A DISSERTATION\\
+	\vspace{30pt}
+	Presented to the\\
+	$department$\\
+	within the Oregon Health \& Science University\\
+	School of Medicine\\
+	in partial fulfillment of\\
+	the requirements for the degree of\\
+	$degree$\\
+	in\\
+	$track$ \\
+	\vspace{30pt}
+	$month$ $year$\\
+	\end{center}
+	\vspace*{\fill}
+	\clearpage
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LAYOUT: Copy Right - info filled above    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\copyrightpage}{
+	\vspace*{\fill}
+	\begin{center}
+	\doublespaced
+	\scshape \copyright \hspace{3pt} Copyright $year$ by $author$\\
+	All Rights Reserved
+	\end{center}
+	\vspace*{\fill}
+    \clearpage
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      LAYOUT: Certificate of Approval      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\certofapproval}{
+    \vspace*{\fill}
+    \begin{center}
+    $track$\\
+    School of Medicine\\
+    Oregon Health \& Science University\\
+    \doublespaced
+    \rule{8cm}{1pt}\\
+    CERTIFICATE OF APPROVAL\\
+    \rule{8cm}{1pt}\\
+    \singlespaced
+    This is to certify that the PhD disseration of\\
+    $author$\\
+    has been approved.\\
+
+    \vspace{30pt}
+    \rule{8cm}{0.5pt}\\
+    $advisor$\\
+    Advisor\\
+
+    \vspace{30pt}
+    \rule{8cm}{0.5pt}\\
+    $chair$\\
+    Chair\\
+
+    \vspace{30pt}
+    \rule{8cm}{0.5pt}\\
+    $committee3$\\
+    Committee Member\\
+
+    \vspace{30pt}
+    \rule{8cm}{0.5pt}\\
+    $committee4$\\
+    Committee Member\\
+
+    \vspace{30pt}
+    \rule{8cm}{0.5pt}\\
+    $committee5$\\
+    Committee Member\\
+
+    \end{center}
+    \vspace*{\fill}
+    \clearpage
+}
+
+\normalem
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\maketitle
+
+\pagenumbering{roman}
+
+\certofapproval
+
+\copyrightpage
+
+\pagestyle{fancy}
+
+$body$
+
+$if(bibliography)$
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+$endif$
+
+$for(include-after)$
+$include-after$
+
+$endfor$
+
+\end{document}

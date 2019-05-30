@@ -1,0 +1,11 @@
+The purpose of the introduction is to elucidate the nature of the problem
+addressed by the thesis or dissertation research. The problem should be clearly presented, and its history discussed through a survey of the literature.
+The author should explain the rationale behind the scientific approach to the problem.
+
+This section typically opens with a high level introduction of the topic and closes with the statement of the project aims (e.g., 3 aims) and associated stated hypotheses.
+
+We may have several citations.
+To do so, call the citation key within a set of brackets.
+For example, `[@RCoreTeam]`.
+This will append the reference to the end of the sentence, like this.[@RCoreTeam]
+Multiple references can be separated by a semicolon (e.g., `[@RCoreTeam; @dissertateOHSU]`).[@RCoreTeam; @dissertateOHSU]

@@ -1,0 +1,174 @@
+---
+title: 'Your Dissertation Title'
+author: 'Your F. Name'
+geometry: [top=1in, bottom=1in, right=1in, left=1.5in]
+month: 'June'
+year: '2020'
+degree: 'Your Degree (Doctor of Philosophy, Masters of Science, etc.)'
+track: 'Track'
+department: 'Your Department'
+uni: 'Oregon Health & Science Univeristy'
+location: 'Portland, OR'
+chair: 'Chair Name'
+advisor: 'Advisor Name'
+committee3: 'Committee Member 3'
+committee4: 'Committee Member 4'
+committee5: 'Committee Member 5'
+nocite: |
+  @dissertateOHSU
+bibliography: Bibliography.bib
+output:
+  dissertateOHSU::dissertateOHSU:
+    latex_engine: xelatex
+    keep_tex: yes
+    pandoc_args: [ '--csl', 'ama_citationStyle.csl' ]
+---
+
+```{r global_options, include=FALSE}
+## This saves you from having to do this for every chunk
+knitr::opts_chunk$set(fig.path = 'figures/',
+                      echo = FALSE, 
+                      warning = FALSE, 
+                      message = FALSE)
+```
+
+
+
+<!-- Dedication -->
+\fancyhead[C]{DEDICATION AND ACKNOWLEDGEMENTS}
+\fancyfoot[C]{\thepage}
+\addcontentsline{toc}{chapter}{Dedication and Acknowledgements}
+
+Dedicate it.
+
+\clearpage
+
+
+
+<!-- Abstract -->
+\fancyhead[C]{ABSTRACT}
+\section*{}
+\addcontentsline{toc}{chapter}{Abstract}
+
+This section should briefly summarize the important elements of the thesis or dissertation.
+It should include a statement of the problem, a brief description of the work performed and a summary of the results and conclusions.
+It should not exceed 500 words.
+
+\clearpage
+
+
+
+<!-- Front Matter -->
+\fancyhead[C]{TABLE OF CONTENTS}
+\fancyfoot[C]{\thepage}
+\renewcommand{\contentsname}{}
+\tableofcontents{}
+\addtocontents{toc}{\protect\thispagestyle{fancy}}
+\clearpage
+
+
+
+<!-- Change spacing and numbering for rest of document -->
+\doublespacing
+\pagenumbering{arabic}
+
+
+
+<!-- Chapter 1 -->
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[C]{INTRODUCTION}
+\chapter{Introduction}
+
+```{r, child='1_introduction.Rmd'}
+```
+
+\clearpage
+
+
+
+<!-- Chapter 2 -->
+\fancyhead[C]{BACKGROUND}
+\chapter{Background}
+
+```{r, child='2_background.Rmd'}
+```
+
+\clearpage
+
+
+
+<!-- Chapter 3 -->
+\fancyhead[C]{AIM 1 TITLE}
+\chapter{Aim 1 Title}
+
+```{r, child='3_aim1.Rmd'}
+```
+
+\clearpage
+
+
+
+<!-- Chapter 4 -->
+\fancyhead[C]{AIM 2 TITLE}
+\chapter{Aim 2 Title}
+
+```{r, child='4_aim2.Rmd'}
+```
+
+\clearpage
+
+
+
+<!-- Chapter 5 -->
+\fancyhead[C]{AIM 3 TITLE}
+\chapter{Aim 3 Title}
+
+```{r, child='5_aim3.Rmd'}
+```
+
+\clearpage
+
+
+
+<!-- Chapter 6 -->
+\fancyhead[C]{DISCUSSION}
+\chapter{Discussion}
+
+```{r, child='6_discussion.Rmd'}
+```
+
+\clearpage
+
+
+
+<!-- Chapter 7 -->
+\fancyhead[C]{SUMMARY AND CONCLUSIONS}
+\chapter{Summary and Conclusions}
+
+```{r, child='7_summary_conclusions.Rmd'}
+```
+
+\clearpage
+
+
+
+<!-- Appendices -->
+\fancyhead[C]{APPENDIX}
+\chapter*{Appendix}
+
+```{r, child='8_appendix.Rmd'}
+```
+
+\clearpage
+
+
+
+<!-- References -->
+\fancyhead[C]{REFERENCES}
+\chapter*{References}
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.4in}
+\setlength{\parskip}{6pt}
+\noindent
