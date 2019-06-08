@@ -4,7 +4,7 @@
 **This is a modified version of
 [`dissertateUSU`](https://github.com/TysonStanley/dissertateUSU).**
 
-# `dissertateOHSU` `v0.2.0` <img src="inst/OHSU_torch.jpg" align="right" width="20%" height="20%"/>
+# `dissertateOHSU` `v0.1.0` <img src="inst/OHSU_torch.jpg" align="right" width="20%" height="20%"/>
 
 The goal of `dissertateOHSU` is to make two aspects of writing a
 dissertation at Oregon Health & Science University a better experience:
@@ -57,13 +57,14 @@ doing. It includes the formatting of the title page as well. Using the
 there. It does this as, while knitting, a file called preamble.Rmd is
 written through a function that is found early in the RMarkdown file.
 This function comes through the dissertateOHSU R package on GitHub
-(download with devtools::install\_github(“aaroncoyner/dissertateOHSU”)).
-After installing the package, I recommend using the template to get
-going using the approach shown below:
+(download with
+`devtools::install_github("aaroncoyner/dissertateOHSU")`). After
+installing the package, I recommend using the template to get going
+using the approach shown below:
 
 Open up a new RMarkdown file:
 
-<img src="inst/dropdownmenu.png" align="center" width="20%"/><br>
+<img src="inst/dropdownmenu.png" align="center" width="60%"/><br>
 
 Select the “Dissertate OHSU” template:
 

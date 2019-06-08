@@ -50,11 +50,11 @@ The first, and most important file, is the only file you’ll knit. It is the ma
 
 Most of it contains pieces that, if you’ve used somewhat more advanced RMarkdown, you are probably familiar with. These include the title, author, output, bibliography, and nocite. The documentation for this can be found at RMarkdown’s website.
 
-This file has comments throughout to highlight what each section is doing. It includes the formatting of the title page as well. Using the `setup` section, the title page is populated with the information put there. It does this as, while knitting, a file called preamble.Rmd is written through a function that is found early in the RMarkdown file. This function comes through the dissertateOHSU R package on GitHub (download with devtools::install_github("aaroncoyner/dissertateOHSU")). After installing the package, I recommend using the template to get going using the approach shown below:
+This file has comments throughout to highlight what each section is doing. It includes the formatting of the title page as well. Using the `setup` section, the title page is populated with the information put there. It does this as, while knitting, a file called preamble.Rmd is written through a function that is found early in the RMarkdown file. This function comes through the dissertateOHSU R package on GitHub (download with `devtools::install_github("aaroncoyner/dissertateOHSU")`). After installing the package, I recommend using the template to get going using the approach shown below:
 
 Open up a new RMarkdown file:
 
-<img src="inst/dropdownmenu.png" align="center" width="20%"/><br>
+<img src="inst/dropdownmenu.png" align="center" width="60%"/><br>
 
 Select the "Dissertate OHSU" template:
 
