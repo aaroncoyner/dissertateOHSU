@@ -1,13 +1,10 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-**This is a fork of
-[`dissertateUSU`](https://github.com/TysonStanley/dissertateUSU). I have
-simply modified the LaTeX to match OHSU guidelines. Credit goes to
-[Tyson
-Barrett](https://twitter.com/healthandstats).**
+**This is a modified version of
+[`dissertateUSU`](https://github.com/TysonStanley/dissertateUSU).**
 
-# `dissertateOHSU` `v0.1.0` <img src="inst/OHSU_torch.jpg" align="right" width="20%" height="20%"/>
+# `dissertateOHSU` `v0.2.0` <img src="inst/OHSU_torch.jpg" align="right" width="20%" height="20%"/>
 
 The goal of `dissertateOHSU` is to make two aspects of writing a
 dissertation at Oregon Health & Science University a better experience:
@@ -44,33 +41,25 @@ Barrett](https://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/)**
 
 The first, and most important file, is the only file you’ll knit. It is
 the main .Rmd file, and will be named whatever you have assigned as the
-template name. The header YAML in this file looks like this:
+template name. The header YAML and document options in this file looks
+like this:
 
 <img src="inst/template.png" align="center" width="70%"/>
 
 Most of it contains pieces that, if you’ve used somewhat more advanced
 RMarkdown, you are probably familiar with. These include the title,
 author, output, bibliography, and nocite. The documentation for this can
-be found at RMarkdown’s website. The other pieces are more rare but
-still documented as useful YAML options in RMarkdown. Among these,
-documentclass: DissertateOHSU is important. This pulls information from
-another file called DissertateOHSU.cls, which ultimately controls much
-of the formatting of the outputted PDF file. This file was made
-particularly to match the specified formatting for Oregon Health &
-Science University (thus the dissertateOHSU name) and thus won’t be a
-perfect fit for all the other universities. My guess is that it is a
-great starting point for you to match your own situation’s guidelines.
+be found at RMarkdown’s website.
 
 This file has comments throughout to highlight what each section is
 doing. It includes the formatting of the title page as well. Using the
-Params: section of the YAML, the title page is populated with the
-information put there. It does this as, while knitting, a file called
-preamble.tex is written through a function that is found early in the
-RMarkdown file. This function comes through the dissertateOHSU R package
-on GitHub (download with
-devtools::install\_github(“aaroncoyner/dissertateOHSU”)). After
-installing the package, I recommend using the template to get going
-using the approach shown below:
+`setup` section, the title page is populated with the information put
+there. It does this as, while knitting, a file called preamble.Rmd is
+written through a function that is found early in the RMarkdown file.
+This function comes through the dissertateOHSU R package on GitHub
+(download with devtools::install\_github(“aaroncoyner/dissertateOHSU”)).
+After installing the package, I recommend using the template to get
+going using the approach shown below:
 
 Open up a new RMarkdown file:
 
@@ -90,12 +79,11 @@ This produces a document that matches the OHSU dissertation guidelines:
 
 <br>
 
-In the folder, there are other RMarkdown files called `Chapter1.Rmd`,
-`Chapter2.Rmd`, etc. These are the files where you will do the writing
-and analyzing. The main RMarkdown file will bring all these files
-together into one document. The only things you need to update in the
-main RMarkdown file is the `yaml` information, the abstracts,
-acknowledgments, and dedication.
+In the folder, there are other RMarkdown files called `aim_1.Rmd`,
+`aim_2.Rmd`, etc. These are the files where you will do the writing and
+analyzing. The main RMarkdown file will bring all these files together
+into one document. The only things you need to update in the main
+RMarkdown file is the `setup` information.
 
 For the references, use the BibTex file named bibliography.bib. I used
 Mendeley as my references manager and then exported all of my references
@@ -110,13 +98,10 @@ ref\_format.csl and put it in my dissertation’s directory.
 ## Notes
 
   - To put the title on two lines (see the thesis cover page above), use
-    `\newline` at the point where you want the title to split to the
+    `\\newline` at the point where you want the title to split to the
     second line.
-  - If you don’t need a section (e.g., “Chapter 5”, etc.), remove it
-    from the main `.Rmd` file. For example, if you want to remove the
-    “Chapter 5”, remove all the lines starting from the `\newpage` in
-    that section down to the actual words `FILL THIS IN`. It will then
-    not be included in the knitted document.
+  - If you don’t need a section, simply remove it from the main `.Rmd`
+    file.
   - For spell checking, use the built-in spell check in RStudio. It’s
     not perfect, but still works well.
 
