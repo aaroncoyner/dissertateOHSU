@@ -4,7 +4,7 @@
 **This is a modified version of
 [`dissertateUSU`](https://github.com/TysonStanley/dissertateUSU).**
 
-# `dissertateOHSU` `v0.1.0` <img src="inst/OHSU_torch.jpg" align="right" width="20%" height="20%"/>
+# `dissertateOHSU` `v0.2.0` <img src="inst/OHSU_torch.jpg" align="right" width="20%" height="20%"/>
 
 The goal of `dissertateOHSU` is to make two aspects of writing a
 dissertation at Oregon Health & Science University a better experience:
