@@ -1,0 +1,11 @@
+---
+output: pdf_document
+---
+\center
+# Dedication and Acknowledgements
+
+\vspace*{200pt}
+
+Dedicate it!
+
+\clearpage

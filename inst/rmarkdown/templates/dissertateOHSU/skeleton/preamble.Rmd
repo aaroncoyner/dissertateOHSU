@@ -1,0 +1,87 @@
+---
+output: pdf_document
+---
+<!-- TITLE PAGE -->
+\pagenumbering{gobble}
+\vspace*{\fill}
+\begin{center}
+\doublespaced
+\MakeUppercase{`r title`}\\
+by\\
+`r author` \\
+\singlespaced
+\vspace{20pt}
+A DISSERTATION\\
+\vspace{30pt}
+Presented to the\\
+`r dept`\\
+within the Oregon Health \& Science University\\
+School of Medicine\\
+in partial fulfillment of\\
+the requirements for the degree of\\
+`r degree`\\
+in\\
+`r track` \\
+\vspace{30pt}
+`r month` `r year`\\
+\end{center}
+\vspace*{\fill}
+\clearpage
+
+
+
+<!-- COPYRIGHT PAGE -->
+\vspace*{\fill}
+\begin{center}
+\doublespaced
+\scshape \copyright \hspace{3pt} Copyright `r year` by `r author`\\
+All Rights Reserved
+\end{center}
+\vspace*{\fill}
+\clearpage
+
+
+
+<!-- CERTIFICATE OF APPROVAL -->
+\vspace*{\fill}
+\begin{center}
+`r track`\\
+School of Medicine\\
+Oregon Health \& Science University\\
+\doublespaced
+\rule{8cm}{1pt}\\
+CERTIFICATE OF APPROVAL\\
+\rule{8cm}{1pt}\\
+\singlespaced
+This is to certify that the PhD disseration of\\
+`r author`\\
+has been approved.\\
+
+\vspace{30pt}
+\rule{8cm}{0.5pt}\\
+`r advisor`\\
+Advisor\\
+
+\vspace{30pt}
+\rule{8cm}{0.5pt}\\
+`r chair`\\
+Chair\\
+
+\vspace{30pt}
+\rule{8cm}{0.5pt}\\
+`r member3`\\
+Committee Member\\
+
+\vspace{30pt}
+\rule{8cm}{0.5pt}\\
+`r member4`\\
+Committee Member\\
+
+\vspace{30pt}
+\rule{8cm}{0.5pt}\\
+`r member5`\\
+Committee Member\\
+
+\end{center}
+\vspace*{\fill}
+\clearpage

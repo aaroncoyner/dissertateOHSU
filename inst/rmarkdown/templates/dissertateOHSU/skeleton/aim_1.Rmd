@@ -1,0 +1,35 @@
+---
+output: pdf_document
+---
+
+\center
+# Aim 1 Title
+\raggedright
+
+## Introduction to Aim 1
+
+\lipsum
+## Focused literature review related to Aim 1
+This section will include the most relevant literature addressing this
+aim.
+
+### Subheading 1
+It'll probably have a subheading.
+
+### Subheading 2
+Or more.
+
+## Conceptual model, research questions and hypotheses
+Blah blah blah.
+
+## Methods to complete Aim 1
+Blah blah blah.
+
+## Results of Aim 1
+Blah blah blah.
+
+## Discussion of Aim 1
+Blah blah blah.
+
+## Conclusions for Aim 1
+Blah blah blah.

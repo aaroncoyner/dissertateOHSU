@@ -1,0 +1,14 @@
+---
+output: pdf_document
+---
+
+\center
+# Discussion
+\raggedright
+
+This section would contain discussion of findings across the three aims.
+
+
+## Major Heading
+\lipsum
+

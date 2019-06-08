@@ -1,0 +1,11 @@
+---
+output: pdf_document
+---
+
+\center
+# Background
+\raggedright
+
+This section should include a comprehensive review of prior work across the stated aims.
+This section also provides a summary of the gaps in the current literature.
+This section will be substantially longer than a background section in a manuscript.
