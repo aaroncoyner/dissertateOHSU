@@ -1,5 +1,0 @@
-# Major Heading
-This section would contain discussion of findings across the three aims.
-
-# Another Major Heading
-\lipsum
