@@ -1,6 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+[![License: GPL
+v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Github Build
+Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
+[![Github All
+Releases](https://img.shields.io/github/downloads/aaroncoyner/dissertateOHSU/total.svg)]()
+
 **This is a modified version of
 [`dissertateUSU`](https://github.com/TysonStanley/dissertateUSU).**
 
